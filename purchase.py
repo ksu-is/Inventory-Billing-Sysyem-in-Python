@@ -463,7 +463,7 @@ def purchase(List):
     file.write("\n\nInvoice: " + invoice + "\t\tDate: " + d + "\n\t\t\t\t\tTime: " + e + "")
     file.write("\nName of Customer: " + str(a_name) + "")
     file.write("\n=============================================================")
-    file.write("\nPARTICULAR\tCOLOR\tUNIT PRICE\tTOTAL")
+    file.write("\nPARTICULAR\tCOLOR(S)\tUNIT PRICE\tTOTAL")
     file.write("\n-------------------------------------------------------------")
 
     for keys in q.keys():  # In this loop, write in a file only those product which is purchase by user.

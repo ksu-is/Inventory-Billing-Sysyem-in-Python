@@ -64,8 +64,8 @@ def over_write(List, Dictionary):   # an overwrite function
             L[27][2] = str(int(L[27][2])-d['Hoodies(4XL)'])
         elif keys == "Hats/Caps":
             L[28][2] = str(int(L[28][2])-d['Hats/Caps'])
-        elif keys == "Tote bag(s)":
-            L[29][2] = str(int(L[29][2])-d['Tote bag(s)'])
+        elif keys == "Tote bag":
+            L[29][2] = str(int(L[29][2])-d['Tote bag'])
         elif keys == "Jersey(S-XL)":
             L[30][2] = str(int(L[30][2])-d['Jersey(S-XL)'])
         elif keys == "Jersey(2XL)":

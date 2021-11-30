@@ -27,7 +27,7 @@ Hoodies(2XL),20.00,1
 Hoodies(3XL),21.50,1
 Hoodies(4XL),23.00,1
 Hats/Caps,9.50,1
-Tote bag(s),6.00,1
+Tote bag,6.00,1
 Jersey(S-XL),9.00,1
 Jersey(2XL),10.50,1
 Jersey(3XL),12.00,1

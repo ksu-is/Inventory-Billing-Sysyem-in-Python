@@ -2,7 +2,7 @@
 module name: purchase
 function name: purchase
 overview of this function:
-1) Customer interaction for what and how much the want buy.
+1) Customer interaction for what and how much the want buy. You can change the third column to adjust for your specific business.
 2) check the user interaction valid or not with exception handelling.
 3) calculating the customer purchase product with discount(if discountable)
 4) show the last update of the product
@@ -35,7 +35,7 @@ def purchase(List):
             or product_name == L[12][0].upper() \
             or product_name == L[13][0].upper() \
             or product_name == L[14][0].upper() \
-            or product_name == L[15][0].upper() \ 
+            or product_name == L[15][0].upper() \
             or product_name == L[16][0].upper() \
             or product_name == L[17][0].upper() \
             or product_name == L[18][0].upper() \
@@ -60,7 +60,7 @@ def purchase(List):
             p = True
             while p == True:
                 try:
-                    p_quantity = int(input("How many " + product + " do you want to buy: "))
+                    p_quantity = int(input("How many colors will " + product + " consist of: "))
                     p = False
                 except:  # executes, if customer entered unexpected value.
                     print("\t\tError!!!\nPlease enter integer value!! ")
@@ -142,7 +142,7 @@ def purchase(List):
                 q[product_name] = p_quantity
             else:
                 print(
-                    "\nSorry!! " + a_name + "!, " + product + " is out of stock.\nWe will add stock of " + product + " later. \nLets hope, you will get this product after next shopping.\n")
+                    "\nSorry!! " + a_name + "!, " + product + " is not a valid color amount.\nPlease select another amount of colors for " + product + " \nSorry for any confusion.\n")
 
             flag = (input(a_name + " do you want buy more products?(Y/N)"))
         else:
@@ -152,10 +152,7 @@ def purchase(List):
             print("PRODUCT\t\tPRICE\t\tCOLORS")
             print("--------------------------------------------")
             for i in range(len(L)):
-                print(L[i][0], "\t\t", L[i][1], "\t\t", L[i][2], "\t\t", L[i][3], "\t\t", L[i][4], "\t\t", L[i][5], "\t\t", L[i][6], "\t\t", L[i][7], "\t\t", L[i][8], "\t\t", L[i][9], "\t\t", L[i][10],
-                "\t\t", L[i][11], "\t\t", L[i][12], "\t\t", L[i][13], "\t\t", L[i][14], "\t\t", L[i][15], "\t\t", L[i][16], "\t\t", L[i][17], "\t\t", L[i][18], "\t\t", L[i][19], "\t\t", L[i][20], 
-                "\t\t", L[i][21], "\t\t", L[i][22], "\t\t", L[i][23], "\t\t", L[i][24], "\t\t", L[i][25], "\t\t", L[i][26], "\t\t", L[i][27], "\t\t", L[i][28], "\t\t", L[i][29], "\t\t", L[i][30], 
-                "\t\t", L[i][31], "\t\t", L[i][32], "\t\t", L[i][33], "\t\t", L[i][34], "\t\t", L[i][35], "\t\t", L[i][36], "\t\t", L[i][37], "\t\t",)  # print, last updated product name, quantity and price.
+                print(L[i][0], "\t\t", L[i][1], "\t\t", L[i][2])  # print, last updated product name, quantity and price.
             print("--------------------------------------------")
 
     print("\nYou Chose Items and it's Quantity respectively:\n", q, "\n")
@@ -168,230 +165,230 @@ def purchase(List):
     f_amount = 0  # final amount
     for keys in q.keys():
         if keys == L[0][0].upper():  # executes this operation if product is phone entered by customer.
-            p_price = int(L[0][1])
-            p_num = int(q[keys])
+            p_price = float(L[0][1])
+            p_num = float(q[keys])
             p_amount = (p_price * p_num)
             f_amount += (p_price * p_num)
             print("\nTotal cost for T-shirt(S-XL): ", p_amount)
         elif keys == L[1][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[1][1])
-            l_num = int(q[keys])
+            l_price = float(L[1][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for T-shirt(2XL): ", l_amount)
         elif keys == L[2][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[2][1])
-            l_num = int(q[keys])
+            l_price = float(L[2][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for T-shirt(3XL): ", l_amount)
         elif keys == L[3][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[3][1])
-            l_num = int(q[keys])
+            l_price = float(L[3][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for T-shirt(4XL): ", l_amount)
         elif keys == L[4][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[4][1])
-            l_num = int(q[keys])
+            l_price = float(L[4][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for T-shirt(S-XL): ", l_amount)
         elif keys == L[5][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[5][1])
-            l_num = int(q[keys])
+            l_price = float(L[5][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for T-shirt(2XL): ", l_amount)
         elif keys == L[6][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[6][1])
-            l_num = int(q[keys])
+            l_price = float(L[6][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for T-shirt(3XL): ", l_amount)
         elif keys == L[7][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[7][1])
-            l_num = int(q[keys])
+            l_price = float(L[7][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for T-shirt(4XL): ", l_amount)
         elif keys == L[8][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[8][1])
-            l_num = int(q[keys])
+            l_price = float(L[8][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Long-sleeve(S-XL): ", l_amount)
         elif keys == L[9][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[9][1])
-            l_num = int(q[keys])
+            l_price = float(L[9][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Long-sleeve(2XL): ", l_amount)
         elif keys == L[10][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[10][1])
-            l_num = int(q[keys])
+            l_price = float(L[10][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Long-sleeve(3XL): ", l_amount)
         elif keys == L[11][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[11][1])
-            l_num = int(q[keys])
+            l_price = float(L[11][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Long-sleeve(4XL): ", l_amount)
         elif keys == L[12][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[12][1])
-            l_num = int(q[keys])
+            l_price = float(L[12][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Long-sleeve(S-XL): ", l_amount)
         elif keys == L[13][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[13][1])
-            l_num = int(q[keys])
+            l_price = float(L[13][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Long-sleeve(2XL): ", l_amount)
         elif keys == L[14][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[14][1])
-            l_num = int(q[keys])
+            l_price = float(L[14][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Long-sleeve(3XL): ", l_amount)
         elif keys == L[15][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[15][1])
-            l_num = int(q[keys])
+            l_price = float(L[15][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Long-sleeve(4XL): ", l_amount)
         elif keys == L[16][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[16][1])
-            l_num = int(q[keys])
+            l_price = float(L[16][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Windbreaker(S-XL): ", l_amount)
         elif keys == L[17][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[17][1])
-            l_num = int(q[keys])
+            l_price = float(L[17][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Windbreaker(2XL): ", l_amount)
         elif keys == L[18][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[18][1])
-            l_num = int(q[keys])
+            l_price = float(L[18][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Windbreaker(3XL): ", l_amount)
         elif keys == L[19][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[19][1])
-            l_num = int(q[keys])
+            l_price = float(L[19][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Windbreaker(4XL): ", l_amount)
         elif keys == L[20][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[20][1])
-            l_num = int(q[keys])
+            l_price = float(L[20][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Hooded Zipper(S-XL): ", l_amount)
         elif keys == L[21][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[21][1])
-            l_num = int(q[keys])
+            l_price = float(L[21][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Hooded Zipper(2XL): ", l_amount)
         elif keys == L[22][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[22][1])
-            l_num = int(q[keys])
+            l_price = float(L[22][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Hooded Zipper(3XL): ", l_amount)
         elif keys == L[23][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[23][1])
-            l_num = int(q[keys])
+            l_price = float(L[23][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Hooded Zipper(4XL): ", l_amount)
         elif keys == L[24][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[24][1])
-            l_num = int(q[keys])
+            l_price = float(L[24][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Hoodies(S-XL): ", l_amount)
         elif keys == L[25][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[25][1])
-            l_num = int(q[keys])
+            l_price = float(L[25][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Hoodies(2XL): ", l_amount)
         elif keys == L[26][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[26][1])
-            l_num = int(q[keys])
+            l_price = float(L[26][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Hoodies(3XL): ", l_amount)
         elif keys == L[27][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[27][1])
-            l_num = int(q[keys])
+            l_price = float(L[27][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Hoodies(4XL): ", l_amount)
         elif keys == L[28][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[28][1])
-            l_num = int(q[keys])
+            l_price = float(L[28][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Hats/Caps: ", l_amount)
         elif keys == L[29][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[29][1])
-            l_num = int(q[keys])
+            l_price = float(L[29][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
-            print("Total cost for Tote bag(s): ", l_amount)
+            print("Total cost for Tote bag: ", l_amount)
         elif keys == L[30][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[30][1])
-            l_num = int(q[keys])
+            l_price = float(L[30][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Jersey(S-XL): ", l_amount)
         elif keys == L[31][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[31][1])
-            l_num = int(q[keys])
+            l_price = float(L[31][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Jersey(2XL): ", l_amount)
         elif keys == L[32][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[32][1])
-            l_num = int(q[keys])
+            l_price = float(L[32][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Jersey(3XL): ", l_amount)
         elif keys == L[33][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[33][1])
-            l_num = int(q[keys])
+            l_price = float(L[33][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Jersey(4XL): ", l_amount)
         elif keys == L[34][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[34][1])
-            l_num = int(q[keys])
+            l_price = float(L[34][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Name on back(all on sizes): ", l_amount)
         elif keys == L[35][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[35][1])
-            l_num = int(q[keys])
+            l_price = float(L[35][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Number on back(6-in): ", l_amount)
         elif keys == L[36][0].upper():  # executes this operation if product is laptop entered by customer.
-            l_price = int(L[36][1])
-            l_num = int(q[keys])
+            l_price = float(L[36][1])
+            l_num = float(q[keys])
             l_amount = (l_price * l_num)
             f_amount += (l_price * l_num)
             print("Total cost for Number on back(8-in): ", l_amount)
         else:  # executes this operation if product is hdd entered by customer.
-            h_price = int(L[37][1])
-            h_num = int(q[keys])
+            h_price = float(L[37][1])
+            h_num = float(q[keys])
             h_amount = (h_price * h_num)
             f_amount += (h_price * h_num)
             print("Total cost for Hand towel: ", h_amount)
@@ -466,7 +463,7 @@ def purchase(List):
     file.write("\n\nInvoice: " + invoice + "\t\tDate: " + d + "\n\t\t\t\t\tTime: " + e + "")
     file.write("\nName of Customer: " + str(a_name) + "")
     file.write("\n=============================================================")
-    file.write("\nPARTICULAR\tQUANTITY\tUNIT PRICE\tTOTAL")
+    file.write("\nPARTICULAR\tCOLOR\tUNIT PRICE\tTOTAL")
     file.write("\n-------------------------------------------------------------")
 
     for keys in q.keys():  # In this loop, write in a file only those product which is purchase by user.
@@ -592,7 +589,7 @@ def purchase(List):
     file.write("\n-------------------------------------------------------------")
     file.write("\n\t\t\t Your payable amount is: " + str(total))
     file.write("\n-------------------------------------------------------------")
-    file.write("\n\n\tThank You " + a_name + " for your shopping.\n\t\tSee you again!")
+    file.write("\n\n\tThank You " + a_name + " for your shopping at Best Tees.\n\t\tSee you again!")
     file.write("\n=============================================================")
     file.close()
     return q
